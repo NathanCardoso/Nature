@@ -1,0 +1,26 @@
+.banner-introduction {
+  background: map-get($color, bg_black);
+
+  .banner {
+    .banner-image {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      
+      .title {
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+  
+        h2 {
+          color: map-get($color, bg_white);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: rem(2);
+          line-height: 0;
+        }
+      }
+    }
+  }
+}

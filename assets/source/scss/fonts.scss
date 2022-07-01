@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("#{$font-path}subset-PlayfairDisplay-Black.eot");
+  src: url("#{$font-path}subset-PlayfairDisplay-Black.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}subset-PlayfairDisplay-Black.woff2") format("woff2"),
+    url("#{$font-path}subset-PlayfairDisplay-Black.woff") format("woff"),
+    url("#{$font-path}subset-PlayfairDisplay-Black.ttf") format("truetype"),
+    url("#{$font-path}subset-PlayfairDisplay-Black.svg#PlayfairDisplay-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,33 @@
+.spirit-animals {
+  padding: rem(60) 0;
+
+  .wrapper {
+    .spirit-animals-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(40);
+      justify-content: center;
+
+      .img-animal {
+        justify-self: end;
+        position: relative;
+
+        .title {
+          bottom: 10%;
+          right: -3%;
+          position: absolute;
+          min-width: rem(200);
+          padding: rem(5) rem(20) rem(10) rem(20);
+          background: map-get($color, bg_red);
+
+          h3 {
+            text-align: center;
+            text-transform: uppercase;
+            color: map-get($color, bg_white);
+            letter-spacing: rem(5);
+          }
+        }
+      }
+    }
+  }
+}

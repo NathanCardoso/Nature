@@ -23,9 +23,13 @@
 @import './components/footer';
 @import './components/title';
 @import './components/banner-introduction';
-@import './components/spirit-animals';
 @import './components/paragraph';
+@import './components/content-header';
+@import './components/description';
 
 // Vendor 
 
 // Modules
+@import './modules/spirit-animals';
+@import './modules/hot-spring-florests';
+@import './modules/mountains';

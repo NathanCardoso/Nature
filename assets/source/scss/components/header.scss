@@ -3,8 +3,9 @@
   width: 100%;
   position: fixed;
   z-index: 1;
-
-  .wrapper {
+  
+  .header-wrapper {
+    min-height: rem(67);
     display: flex;
     justify-content: space-between;
     align-items: center;

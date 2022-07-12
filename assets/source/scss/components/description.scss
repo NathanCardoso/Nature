@@ -1,0 +1,15 @@
+.title {
+  margin: rem(20) 0;
+
+  h4 {
+    color: map-get($color, bg_green);
+  }
+}
+
+.paragraph {
+  margin-bottom: rem(40);
+
+  p {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}

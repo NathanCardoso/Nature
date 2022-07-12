@@ -1,0 +1,46 @@
+.content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    margin: rem(20) 0;
+
+    h2 {
+      color: map-get($color, bg_black_alt);
+    }
+  }
+
+  .buttons {
+    margin: rem(20) 0 rem(40) 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        .button {
+          display: inline-block;
+          color: map-get($color, bg_green);
+          border: rem(4) solid;
+          padding: rem(10) 0;
+          width: rem(200);
+          margin: rem(10);
+          text-decoration: none;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: rem(2);
+
+          &.active {
+            background: map-get($color, bg_green);
+            padding: rem(10) 0;
+            color: map-get($color, bg_white);
+            border: rem(4) solid map-get($color, bg_green);
+          }
+        }
+      }
+    }
+  }
+}

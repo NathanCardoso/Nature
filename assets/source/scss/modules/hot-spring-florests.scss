@@ -3,11 +3,7 @@
   padding: rem(60) 0;
 
   .florests-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+    display: none;
 
     .img-content {
       position: relative;
@@ -35,6 +31,27 @@
       display: flex;
       justify-content: space-between;
       gap: rem(20);
+    }
+
+    &.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: .3s;
+      animation: tabNav .3s;
+
+      @keyframes tabNav {
+        from {
+          transform: translate3d(-50px, 0, 0);
+          opacity: 0;
+        }
+
+        to {
+          transform: translate3d(0px, 0, 0);
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -6,6 +6,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="text/javascript">
+    document.documentElement.className += " js"
+  </script>
 </head>
 
 <body>
@@ -43,146 +46,316 @@
       </div>
     </section>
 
-    <article class="spirit-animals">
-      <div class="container">
-        <div class="wrapper">
-          <div class="content-header">
-            <div class="title">
-              <h2>Animais Espirituais</h2>
-            </div>
-            <nav class="buttons">
-              <ul>
-                <li><a href="#fox" class="button">Fox</a></li>
-                <li><a href="#firefox" class="button">Firefox</a></li>
-                <li><a href="#wolf" class="button">Wolf</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="spirit-animals-content">
-            <div class="img-animal">
-              <img src="images/fox.jpg" alt="image description - fox">
+    <main class="main">
+      <article class="spirit-animals"  data-group="animals">
+        <div class="container">
+          <div class="wrapper">
+            <div class="content-header">
               <div class="title">
-                <h3>FOX</h3>
+                <h2>Animais Espirituais</h2>
+              </div>
+              <nav class="buttons">
+                <ul>
+                  <li><a href="#fox" class="button" data-click="fox">Fox</a></li>
+                  <li><a href="#firefox" class="button" data-click="firefox">Firefox</a></li>
+                  <li><a href="#wolf" class="button" data-click="wolf">Wolf</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="spirit-animals-content" data-target="fox">
+              <div class="img-animal">
+                <img src="images/fox.jpg" alt="image description - fox">
+                <div class="title">
+                  <h3>FOX</h3>
+                </div>
+              </div>
+              <div class="spirit-animals-description">
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="spirit-animals-description">
-              <div class="spirit-animals-row">
+            <div class="spirit-animals-content" data-target="firefox">
+              <div class="img-animal">
+                <img src="images/firefox.jpg" alt="image description - Firefox">
                 <div class="title">
-                  <h4>Características</h4>
-                </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                  <h3>FIREFOX</h3>
                 </div>
               </div>
-              <div class="spirit-animals-row">
-                <div class="title">
-                  <h4>Habitat</h4>
+              <div class="spirit-animals-description">
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="spirit-animals-content" data-target="wolf">
+              <div class="img-animal">
+                <img src="images/wolf.jpg" alt="image description - wolf">
+                <div class="title">
+                  <h3>WOLF</h3>
+                </div>
+              </div>
+              <div class="spirit-animals-description">
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="spirit-animals-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
-
-    <article class="hot-spring-florests">
-      <div class="container">
-        <div class="wrapper">
-          <div class="content-header">
-            <div class="title">
-              <h2>Florestas Termais</h2>
-            </div>
-            <nav class="buttons">
-              <ul>
-                <li><a href="#fox" class="button">Estrada</a></li>
-                <li><a href="#firefox" class="button">Sol</a></li>
-                <li><a href="#wolf" class="button">Verde</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="florests-content">
-            <div class="img-content">
-              <img src="images/road.jpg" alt="image description - road">
+      </article>
+  
+      <article class="hot-spring-florests" data-group="florests">
+        <div class="container">
+          <div class="wrapper">
+            <div class="content-header">
               <div class="title">
-                <h3>Estrada</h3>
+                <h2>Florestas Termais</h2>
+              </div>
+              <nav class="buttons">
+                <ul>
+                  <li><a href="#road" class="button" data-click="road">Estrada</a></li>
+                  <li><a href="#sun" class="button" data-click="sun">Sol</a></li>
+                  <li><a href="#green" class="button" data-click="green">Verde</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="florests-content" data-target="road">
+              <div class="img-content">
+                <img src="images/road.jpg" alt="image description - road">
+                <div class="title">
+                  <h3>Estrada</h3>
+                </div>
+              </div>
+              <div class="content-description">
+                <div class="features">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="habitat">
+                  <div class="title">
+                    <h4>habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="content-description">
-              <div class="features">
+            <div class="florests-content" data-target="sun">
+              <div class="img-content">
+                <img src="images/sun.jpg" alt="image description - sun">
                 <div class="title">
-                  <h4>Características</h4>
-                </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                  <h3>Sol</h3>
                 </div>
               </div>
-              <div class="habitat">
-                <div class="title">
-                  <h4>habitat</h4>
+              <div class="content-description">
+                <div class="features">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                <div class="habitat">
+                  <div class="title">
+                    <h4>habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="florests-content" data-target="green">
+              <div class="img-content">
+                <img src="images/green.jpg" alt="image description - green">
+                <div class="title">
+                  <h3>Green</h3>
+                </div>
+              </div>
+              <div class="content-description">
+                <div class="features">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="habitat">
+                  <div class="title">
+                    <h4>habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
-
-    <article class="mountains">
-      <div class="container">
-        <div class="wrapper">
-          <div class="content-header">
-            <div class="title">
-              <h2>Montanhas da Alma</h2>
-            </div>
-            <nav class="buttons">
-              <ul>
-                <li><a href="#fox" class="button">Pico</a></li>
-                <li><a href="#firefox" class="button">Montanha</a></li>
-                <li><a href="#wolf" class="button">Monte</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="mountains-content">
-            <div class="img-mountains">
-              <img src="images/peak.jpg" alt="image description - peak">
+      </article>
+  
+      <article class="mountains" data-group="mountains">
+        <div class="container">
+          <div class="wrapper">
+            <div class="content-header">
               <div class="title">
-                <h3>Pico</h3>
+                <h2>Montanhas da Alma</h2>
+              </div>
+              <nav class="buttons">
+                <ul>
+                  <li><a href="#peak" class="button" data-click="peak">Pico</a></li>
+                  <li><a href="#mountain" class="button" data-click="mountain">Montanha</a></li>
+                  <li><a href="#lot" class="button" data-click="lot">Monte</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mountains-content" data-target="peak">
+              <div class="img-mountains">
+                <img src="images/peak.jpg" alt="image description - peak">
+                <div class="title">
+                  <h3>Pico</h3>
+                </div>
+              </div>
+              <div class="description">
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="description">
-              <div class="mountains-row">
+            <div class="mountains-content" data-target="mountain">
+              <div class="img-mountains">
+                <img src="images/mountain.jpg" alt="image description - mountain">
                 <div class="title">
-                  <h4>Características</h4>
-                </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                  <h3>Montanha</h3>
                 </div>
               </div>
-              <div class="mountains-row">
-                <div class="title">
-                  <h4>Habitat</h4>
+              <div class="description">
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
-                <div class="paragraph">
-                  <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
-                    das formas de ação.</p>
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mountains-content" data-target="lot">
+              <div class="img-mountains">
+                <img src="images/lot.jpg" alt="image description - lot">
+                <div class="title">
+                  <h3>Monte</h3>
+                </div>
+              </div>
+              <div class="description">
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Características</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
+                </div>
+                <div class="mountains-row">
+                  <div class="title">
+                    <h4>Habitat</h4>
+                  </div>
+                  <div class="paragraph">
+                    <p>Todavia, a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação
+                      das formas de ação.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </main>
   </div>
   <script src="js/scripts-min.js"></script>
 </body>

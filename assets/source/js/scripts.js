@@ -7,6 +7,9 @@ $(document).ready(() => {
   screenHeight();
   backgroundImage();
   targetBlank();
+
+  // Components
+  tabNav()
   
   // Helpers
   currentDevice = device();

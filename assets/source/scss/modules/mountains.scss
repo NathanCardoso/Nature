@@ -3,10 +3,7 @@
 
   .wrapper {
     .mountains-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: rem(40);
-      justify-content: center;
+      display: none;
 
       .img-mountains {
         justify-self: end;
@@ -25,6 +22,26 @@
             text-transform: uppercase;
             color: map-get($color, bg_white);
             letter-spacing: rem(5);
+          }
+        }
+      }
+
+      &.active {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(40);
+        justify-content: center;
+        animation: tabNav .3s;
+
+        @keyframes tabNav {
+          from {
+            transform: translate3d(-50px, 0, 0);
+            opacity: 0;
+          }
+
+          to {
+            transform: translate3d(0px, 0, 0);
+            opacity: 1;
           }
         }
       }

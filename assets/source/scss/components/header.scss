@@ -24,6 +24,9 @@
     }
 
     .navigation {
+      .btn-mobile {
+        display: none;
+      }
       .menu {
         display: flex;
         align-items: center;
@@ -53,7 +56,25 @@
               transition: 0.3s;
               position: absolute;
             }
+
+            &.active::after {
+              width: 100%;
+            }
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet-portrait-down) {
+    .header-wrapper {
+      .navigation {
+        .btn-mobile {
+          display: block;
+        }
+
+        .menu {
+          display: none;
         }
       }
     }

@@ -60,6 +60,61 @@ const targetBlank = () => {
   $("a[href^='http']").not("[href*='"+window.location.host.toLowerCase()+"']").attr('target','_blank');
 }
 
+const activeLink = () => {
+  const article = $('article')
+
+  article.each(function () {
+    let height = $(this).height()
+    let offsetTop = $(this).offset().top
+    let headerHeight = $('.header').innerHeight()
+    let id = $(this).attr('id')
+    let itemMenu = $('a[href="#' + id + '"]')
+
+    $(window).on('scroll', function () {
+      let scrollTop = $(window).scrollTop()
+      if ((offsetTop - headerHeight <= scrollTop) && (offsetTop + height - headerHeight >= scrollTop)) {
+        itemMenu.addClass('active')
+      } else {
+        itemMenu.removeClass('active')
+      }
+    })
+  })
+}
+const menuMobile = () => {
+    const btnMobile = $('.btn-mobile')
+
+    function toggleMenu() {
+        const navigation = $('.nav')
+        navigation.toggleClass('active')
+    }
+
+    btnMobile.on('click', toggleMenu)
+}
+const smoothScroll = () => {
+  const navigation = $('.navigation a[href^="#"]')
+  navigation.on('click', function (e) {
+    e.preventDefault()
+
+    let id = $(this).attr('href')
+    let headerHeight = $('.header').innerHeight()
+    let targetOffset = $(id).offset().top
+    const html = $('html, body')
+
+    html.animate({
+      scrollTop: targetOffset - headerHeight
+    }, 500)
+  })
+
+  const logo = $('.logo')
+  logo.on('click', function(e) {
+    e.preventDefault()
+    const html = $('html, body')
+
+    html.animate({
+      scrollTop: 0 
+    }, 500)
+  })
+}
 const tabNav = () => {
   let group = $('[data-group]')
 
@@ -97,6 +152,9 @@ $(document).ready(() => {
 
   // Components
   tabNav()
+  smoothScroll()
+  activeLink()
+  menuMobile()
   
   // Helpers
   currentDevice = device();

@@ -10,6 +10,9 @@ $(document).ready(() => {
 
   // Components
   tabNav()
+  smoothScroll()
+  activeLink()
+  menuMobile()
   
   // Helpers
   currentDevice = device();

@@ -2,10 +2,27 @@
   background: map-get($color, bg_black);
 
   .banner {
+    position: relative;
+    overflow: hidden;
+
     .banner-image {
       display: flex;
       justify-content: center;
-      position: relative;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: .5s;
+      margin-top: rem(67);
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+
+      &.active {
+        position: relative;
+        opacity: 1;
+      }
       
       .title {
         position: absolute;

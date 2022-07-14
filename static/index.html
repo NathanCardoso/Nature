@@ -21,8 +21,10 @@
             <a href="#">NATURE</a>
           </div>
           <nav class="navigation">
-            <button class="btn-mobile">Menu</button>
-            <ul class="menu">
+            <button class="btn-mobile" aria-label="abrir menu" aria-haspopup="true" ari-controls="menu" aria-expanded="false">
+              <span class="sr-only">menu mobile</span>
+            </button>
+            <ul class="menu" role="menu">
               <li><a href="#animal">Animais</a></li>
               <li><a href="#florests">Florestas</a></li>
               <li><a href="#mountains">Montahas</a></li>
@@ -42,6 +44,18 @@
                 <h2>Animais</h2>
               </div>
             </div>
+            <div class="banner-image">
+              <img src="images/slide-2.jpg" alt="image description - banner">
+              <div class="title">
+                <h2>Florestas</h2>
+              </div>
+            </div>
+            <div class="banner-image">
+              <img src="images/slide-3.jpg" alt="image description - banner">
+              <div class="title">
+                <h2>Montanhas</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +65,7 @@
       <article id="animal" class="spirit-animals"  data-group="animals">
         <div class="container">
           <div class="wrapper">
-            <div class="content-header">
+            <div class="content-header" data-anime="scroll">
               <div class="title">
                 <h2>Animais Espirituais</h2>
               </div>
@@ -154,7 +168,7 @@
       <article id="florests" class="hot-spring-florests" data-group="florests">
         <div class="container">
           <div class="wrapper">
-            <div class="content-header">
+            <div class="content-header" data-anime="scroll">
               <div class="title">
                 <h2>Florestas Termais</h2>
               </div>
@@ -257,7 +271,7 @@
       <article id="mountains" class="mountains" data-group="mountains">
         <div class="container">
           <div class="wrapper">
-            <div class="content-header">
+            <div class="content-header" data-anime="scroll">
               <div class="title">
                 <h2>Montanhas da Alma</h2>
               </div>

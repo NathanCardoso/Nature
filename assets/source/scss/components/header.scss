@@ -70,11 +70,64 @@
     .header-wrapper {
       .navigation {
         .btn-mobile {
-          display: block;
-        }
+          display: flex;
+          // padding: rem(8) rem(16);
+          border: none;
+          background: none;
+          cursor: pointer;
 
+          border-top: 2px solid;
+          width: rem(25);
+          display: block;
+          color: map-get($color, bg_white);
+           
+          &::after, &::before {
+            content: '';
+            width: rem(25);
+            height: rem(2);
+            background: currentColor;
+            display: block;
+            margin-top: rem(5);
+            transition: .3s;
+            position: relative;
+           }
+
+           &.active {
+            border-top-color: transparent;
+
+            &::before {
+              transform: rotate(135deg);
+            }
+            &::after {
+              transform: rotate(-135deg);
+              top: rem(-7)
+            }
+           }
+        }
+        
         .menu {
-          display: none;
+          display: block;
+          position: absolute;
+          width: 100%;
+          top: 100%;
+          right: 0;
+          background: map-get($color, bg_green);
+          transition: .6s;
+          z-index: 10;
+          height: 0;
+          visibility: hidden;
+          overflow-y: auto;
+          
+          li {
+            padding: rem(16) 0;
+            margin: 0 rem(42);
+            border-bottom: 2px solid rgba(0,0,0, .05);
+          }
+          
+          &.active {
+            height: 100vh;
+            visibility: visible;
+          }
         }
       }
     }

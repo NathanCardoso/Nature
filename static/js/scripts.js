@@ -81,14 +81,69 @@ const activeLink = () => {
   })
 }
 const menuMobile = () => {
-    const btnMobile = $('.btn-mobile')
+  const btnMobile = $('.btn-mobile')
 
-    function toggleMenu() {
-        const navigation = $('.nav')
-        navigation.toggleClass('active')
-    }
+  function toggleMenu() {
+    const menu = $('.menu')
 
-    btnMobile.on('click', toggleMenu)
+    btnMobile.toggleClass('active')
+    menu.toggleClass('active')
+    btnMobile.hasClass('active') ? $(this).attr('aria-expanded', true) : $(this).attr('aria-expanded', false)
+    btnMobile.hasClass('active') ? $(this).attr('aria-label', 'fechar menu') : $(this).attr('aria-label', 'abrir menu')
+
+  }
+
+  btnMobile.on('touchstart', toggleMenu)
+}
+const scrollAnimate = () => {
+  const target = $('[data-anime="scroll"]')
+  const animationClass = 'animate'
+  const offset = $(window).height() * 3 / 4
+
+
+  function animeScroll() {
+    let documentTop = $(document).scrollTop()
+
+    target.each(function () {
+      let itemTop = $(this).offset().top
+      console.log(itemTop)
+      if (documentTop > itemTop - offset) {
+        $(this).addClass(animationClass)
+      } else {
+        $(this).removeClass(animationClass)
+      }
+    })
+  }
+
+  animeScroll()
+
+  $(document).scroll(function () {
+    animeScroll()
+  })
+}
+const slide = () => {
+  const bannerFirst = $('.banner > :first')
+  const banner = $('.banner')
+  let rotate
+
+  bannerFirst.addClass('active')
+  function rotateSlide () {
+    let activeSlide = $('.banner-image.active')
+    let nextSlide = activeSlide.next()
+
+    nextSlide.length == 0 ? nextSlide = bannerFirst : ''
+    activeSlide.removeClass('active')
+    nextSlide.addClass('active')
+  }
+  rotate = setInterval(rotateSlide, 2000)
+
+  banner.on('mousemove', function() {
+    clearInterval(rotate)
+  })
+
+  banner.on('mouseout', function() {
+    rotate = setInterval(rotateSlide, 2000)
+  })
 }
 const smoothScroll = () => {
   const navigation = $('.navigation a[href^="#"]')
@@ -155,6 +210,8 @@ $(document).ready(() => {
   smoothScroll()
   activeLink()
   menuMobile()
+  slide()
+  scrollAnimate()
   
   // Helpers
   currentDevice = device();

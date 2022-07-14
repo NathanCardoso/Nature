@@ -43,4 +43,12 @@
       }
     }
   }
+
+  @media screen and (max-width: $tablet-portrait-down) {
+    .buttons {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
 }

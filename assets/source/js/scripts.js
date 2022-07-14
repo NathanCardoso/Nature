@@ -13,6 +13,8 @@ $(document).ready(() => {
   smoothScroll()
   activeLink()
   menuMobile()
+  slide()
+  scrollAnimate()
   
   // Helpers
   currentDevice = device();

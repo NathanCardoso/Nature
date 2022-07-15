@@ -9,7 +9,6 @@ const scrollAnimate = () => {
 
     target.each(function () {
       let itemTop = $(this).offset().top
-      console.log(itemTop)
       if (documentTop > itemTop - offset) {
         $(this).addClass(animationClass)
       } else {

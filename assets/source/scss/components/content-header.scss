@@ -45,6 +45,11 @@
   }
 
   @media screen and (max-width: $tablet-portrait-down) {
+    .title {
+      h2 {
+        text-align: center;
+      }
+    }
     .buttons {
       ul {
         flex-direction: column;

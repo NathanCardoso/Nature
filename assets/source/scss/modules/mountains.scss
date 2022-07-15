@@ -47,4 +47,22 @@
       }
     }
   }
+  @media screen and (max-width:$tablet-portrait-down) {
+    .wrapper {
+      .mountains-content {
+        .img-mountains {
+          max-width: 100%;
+          justify-self: center;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        &.active {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
 }

@@ -48,4 +48,23 @@
       }
     }
   }
+  @media screen and (max-width: $tablet-portrait-down) {
+    .wrapper {
+      .spirit-animals-content {
+        &.active {
+          grid-template-columns: 1fr;
+
+          .img-animal {
+            max-width: 100%;
+            justify-self: center;
+            
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
 }

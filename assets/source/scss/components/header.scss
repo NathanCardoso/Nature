@@ -68,10 +68,17 @@
 
   @media screen and (max-width: $tablet-portrait-down) {
     .header-wrapper {
+      .logo {
+        a {
+          font-size: rem(24);
+        }
+      }
+
       .navigation {
+        padding: rem(8) rem(16);
+        
         .btn-mobile {
           display: flex;
-          // padding: rem(8) rem(16);
           border: none;
           background: none;
           cursor: pointer;

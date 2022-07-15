@@ -1,4 +1,11 @@
-#footer {
-  
+.footer {
+ background: map-get($color, bg_green); 
+ color: map-get($color, bg_white);
+ padding: rem(15);
+ p {
+    text-align: center;
+    font-family: monospace;
+    font-weight: 500;
+ }
 }
  

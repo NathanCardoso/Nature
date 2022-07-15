@@ -54,4 +54,34 @@
       }
     }
   }
+  @media screen and (max-width: $tablet-portrait-down) {
+    .florests-content {
+      .img-content {
+        max-width: 100%;
+        margin: 0;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .title {
+          margin: -10px 0 rem(20);
+          position: relative;
+          bottom: 0;
+          width: 100%;
+          right: 0;
+          transform: none;
+
+           h3 {
+            font-size: rem(22);
+           }
+        }
+      }
+      .content-description {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  }
 }
